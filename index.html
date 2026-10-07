@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>查經班</title>
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="turn.min.js"></script>
+</head>
+<body>
+<style type="text/css">
+body{
+	background:white; /* #ccc */
+}
+#magazine{
+	width:1152px;
+	height:864px;
+}
+#magazine .turn-page{
+	background-color:white; /* #ccc */
+	background-size:100% 100%;
+}
+
+</style>
+
+<style>
+.dxd_beating  > span {  animation: bounce 2.6s cubic-bezier(0.5, 0, 1, .3) infinite alternate;
+  display: inline-block;
+  font-size: 50px;
+  color: #666666;
+  font-family:"宋体"
+}
+ .dxd_beating  > span:nth-of-type(1) {  animation-delay: 0s;}
+ .dxd_beating  > span:nth-of-type(2) {  animation-delay: 0.15s;}
+ .dxd_beating  > span:nth-of-type(3) {  animation-delay: 0.3s;}
+ .dxd_beating  > span:nth-of-type(4) {  animation-delay: 0.45s;}
+ .dxd_beating  > span:nth-of-type(5) {  animation-delay: 0.6s;}
+ .dxd_beating  > span:nth-of-type(6) {  animation-delay: 0.75s;}
+ .dxd_beating  > span:nth-of-type(7) {  animation-delay: 0.9s;}
+ .dxd_beating  > span:nth-of-type(8) {  animation-delay: 1.05s;}
+ .dxd_beating  > span:nth-of-type(9) {  animation-delay: 1.2s;}
+ .dxd_beating  > span:nth-of-type(10) {  animation-delay: 1.35s;}
+ .dxd_beating  > span:nth-of-type(11) {  animation-delay: 1.5s;}
+ .dxd_beating  > span:nth-of-type(12) {  animation-delay: 1.65s;}
+ .dxd_beating  > span:nth-of-type(13) {  animation-delay: 1.8s;}
+ .dxd_beating  > span:nth-of-type(14) {  animation-delay: 1.95s;}
+ .dxd_beating  > span:nth-of-type(15) {  animation-delay: 2.1s;}
+ .dxd_beating  > span:nth-of-type(16) {  animation-delay: 2.25s;}
+ .dxd_beating  > span:nth-of-type(17) {  animation-delay: 2.4s;}
+ .dxd_beating  > span:nth-of-type(18) {  animation-delay: 2.55s;}
+@keyframes bounce {  0% {    transform: translateY(0);
+    text-shadow: 0 0 0.05em rgba(0, 0, 0, 0.7);
+  }
+  100% {
+    transform: translateY(-0.1em);
+    text-shadow: 0 .5em 0.05em rgba(0, 0, 0, 0.4);
+  }
+}
+</style>
+
+
+<div id="magazine">
+<section align="center">
+<style>
+body {
+  height:100%;
+}
+
+body {
+  background: white;
+  background: -webkit-radial-gradient(center ellipse, white 0%, white 70%);
+  background: radial-gradient(ellipse at center, white 0%, white 70%);
+  background-size: 100%;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+
+#clock {
+  font-family: 'Share Tech Mono', monospace;
+  color: white;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: blue;
+  text-shadow: 0 0 20px gray, 0 0 20px rgba(10, 175, 230, 0);
+}
+#clock .time {
+  letter-spacing: 0.05em;
+  font-size: 55px;
+  padding: 5px 0;
+}
+#clock .date {
+  letter-spacing: 0.1em;
+  font-size: 25px;
+}
+#clock .text {
+  letter-spacing: 0.1em;
+  font-size: 12px;
+  padding: 20px 0 0;
+}
+</style>
+<body>
+<div id="clock" style="top:800px;background-color:white;">
+    <p class="date">{{ date }}</p>
+    <p class="time">{{ time }}</p>
+</div>
+<div align="center " style="width:100%;height:100px;background-color:white;">
+    <div style="width:100%;background-color:white;" align="center" class="dxd_beating">
+        <span style="font-family:DfKai-SB;color:red;text-align:center;font-size:55px">
+        <strong >聖</strong></span>
+		<span style="font-family:DfKai-SB;color:red;text-align:center;font-size:55px">
+        <strong >經</strong></span>
+        <span style="font-family:DfKai-SB;color:red;text-align:center;font-size:55px">
+        <strong >是</strong></span>
+        <span style="font-family:DfKai-SB;color:red;text-align:center;font-size:55px">
+        <strong >神</strong></span>
+        <span style="font-family:DfKai-SB;color:red;text-align:center;font-size:55px">
+        <strong >的</strong></span>
+        <span style="font-family:DfKai-SB;color:red;text-align:center;font-size:55px">
+        <strong >話</strong></span>
+        <span style="font-family:DfKai-SB;color:red;text-align:center;font-size:55px">
+        <strong >語</strong></span>
+		<span style="font-family:DfKai-SB;color:red;text-align:center;font-size:55px">
+        <strong >，</strong></span>
+        <span style="font-family:DfKai-SB;color:red;text-align:center;font-size:55px">
+        <strong >是</strong></span>
+        <span style="font-family:DfKai-SB;color:red;text-align:center;font-size:55px">
+        <strong >人</strong></span>
+        <span style="font-family:DfKai-SB;color:red;text-align:center;font-size:55px">
+        <strong >生</strong></span>
+        <span style="font-family:DfKai-SB;color:red;text-align:center;font-size:55px">
+        <strong >命</strong></span>
+        <span style="font-family:DfKai-SB;color:red;text-align:center;font-size:55px">
+        <strong >的</strong></span>
+		<span style="font-family:DfKai-SB;color:red;text-align:center;font-size:55px">
+        <strong >糧</strong></span>
+        <span style="font-family:DfKai-SB;color:red;text-align:center;font-size:55px">
+        <strong >。</strong></span>
+	</div>
+</div>
+
+
+<div align="center" style="height:120%;height:430px;background-color:white;"><img src=Bible.jpg>
+</div>
+<div style="width:100%;height:60px;background-color:white;" align="center" >
+    <span style="font-family:DfKai-SB;color:black;text-align:center;font-size:45px">
+        <strong >歡迎弟兄姊妹出席參加，</strong></span>
+</div>
+
+
+
+
+<div style="width:100%;height:60px;background-color:white;" align="center" >
+    <span style="font-family:DfKai-SB;color:black;text-align:center;font-size:45px">
+        <strong >逢星期三晚上8時30分，</strong></span>
+</div>
+
+
+<div style="width:100%;height:0px;background-color:white;" align="center">
+		<span style="font-family:DfKai-SB;color:black;text-align:center;font-size:45px"><strong >在ZOOM舉行研經聚會。</strong></span>
+</div>
+
+<div style="display: flex; justify-content: flex-end; width: 100%;">
+    <img src=QRcode-Zoom.jpeg style="width: 20%; background-color: white;">
+</div>
+
+</section>
+
+
+<section align="center">
+<div align="center" style="width:100%;background-color:white;">
+
+<iframe width="1120" height="630" src="https://www.youtube-nocookie.com/embed/TH7gPe9T1Zs?si=42y_fJR1ntiL_Ix9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+</div>
+</section>
+
+	<div style="background-image:url(1.png);"></div>
+	<div style="background-image:url(2.png);"></div>
+	<div style="background-image:url(3.png);"></div>
+	<div style="background-image:url(4.png);"></div>
+	<div style="background-image:url(5.png);"></div>
+	<div style="background-image:url(6.png);"></div>
+    <div style="background-image:url(7.png);"></div>
+
+</div>
+
+
+<script type="text/javascript">
+
+	$(window).ready(function() {
+		$('#magazine').turn({
+							display: 'single',
+							acceleration: true,
+							gradients: !$.isTouch,
+							elevation:50,
+							when: {
+								turned: function(e, page) {
+									/*console.log('Current view: ', $(this).turn('view'));*/
+								}
+							}
+						});
+	});
+	
+	
+	$(window).bind('keydown', function(e){
+		
+		if (e.keyCode==37)
+			$('#magazine').turn('previous');
+		else if (e.keyCode==39)
+			$('#magazine').turn('next');
+			
+	});
+
+</script>
+		<script src="reveal.min.js"></script>
+    <style>
+        #clock1 {
+            position: fixed;
+            bottom: 50px; /* Adjust as needed */
+            left: 20px; /* Adjust as needed */
+            z-index:30;
+            font-size: 24px;
+        }
+    </style>
+
+
+
+<div id="clock1" style="top:830px;background-color:white;">
+
+<script>
+    function updateClock() {
+        const now = new Date();
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+     /* const seconds = String(now.getSeconds()).padStart(2, '0');
+       document.getElementById('clock1').innerText = `${hours}:${minutes}:${seconds}`;*/
+        document.getElementById('clock1').innerText = `${hours}:${minutes}`;
+    }
+
+    setInterval(updateClock, 1000);
+    updateClock(); // Initial call to display the clock immediately
+
+</script>
+</head>
+</body>
+</html>
