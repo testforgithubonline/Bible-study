@@ -15,6 +15,7 @@
     #magazine {
       width: 1152px;
       height: 864px;
+      margin: 0 auto;
     }
     #magazine .turn-page {
       background-color: white;
@@ -104,7 +105,7 @@
 
   <!-- 第一頁：標題頁（保留原本設計） -->
   <section align="center">
-    <div align="center" style="width:100%;height:100px;background-color:white;">
+    <div align="center" style="width:100%;height:90px;background-color:white;">
       <div style="width:100%;background-color:white;" align="center" class="dxd_beating">
         <span style="font-family:DfKai-SB;color:red;text-align:center;font-size:55px"><strong>聖</strong></span>
         <span style="font-family:DfKai-SB;color:red;text-align:center;font-size:55px"><strong>經</strong></span>
@@ -124,7 +125,7 @@
       </div>
     </div>
 
-    <div align="center" style="height:430px;background-color:white;">
+    <div align="center" style="height:390px;background-color:white;">
       <img src="Bible.jpg">
     </div>
 
@@ -149,7 +150,7 @@
     </div>
   </section>
 
-      <section align="center">
+  <section align="center">
       <div id="linkArea" align="center" style="width:100%; height:100%; background-color:white; display:flex; flex-direction:column; justify-content:center; align-items:center;">
         <iframe
           id="todayVideo"
@@ -162,63 +163,13 @@
           referrerpolicy="strict-origin-when-cross-origin"
           allowfullscreen>
         </iframe>
-        <div id="noVideoMessage">今天沒有設定影片連結</div>
       </div>
     </section>
-
-
-
-
-
-  <!-- 第二頁：當天所有連結（按鈕樣式）
-  <section align="center">
-    <div id="linkArea">
-      <h2 style="font-family:DfKai-SB; font-size:40px; color:#333;">今日連結</h2>
-      <div id="linksContainer"></div>
-      <div id="noLinkMessage">今天沒有設定連結</div>
-    </div>
-  </section>
--->
-
-  <!-- 第三頁：YouTube（保留原本）
-  <section align="center">
-    <div align="center" style="width:100%;background-color:white;">
-      <iframe width="1120" height="630"
-        src="https://www.youtube-nocookie.com/embed/TH7gPe9T1Zs?si=42y_fJR1ntiL_Ix9"
-        title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-      </iframe>
-    </div>
-  </section>
-  -->
-
-  <!-- 後面的圖片頁會由 JavaScript 自動加入 -->
 
 </div>
 
 <!-- 右下角時鐘 -->
-<div id="clock1"></div>
-
-
-  <div id="magazine">
-    <section align="center">
-      <div align="center" style="width:100%; height:100%; background-color:white; display:flex; flex-direction:column; justify-content:center; align-items:center;">
-        <iframe
-          id="todayVideo"
-          width="1120"
-          height="630"
-          src=""
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen>
-        </iframe>
-        <div id="noVideoMessage">今天沒有設定影片連結</div>
-      </div>
-    </section>
-  </div>
+<div id="clock1" style="top:830px;background-color:white;">
 
   <script type="text/javascript">
     function getTodayDate() {
