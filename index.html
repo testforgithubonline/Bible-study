@@ -105,6 +105,55 @@
 
   <!-- 第一頁：標題頁（保留原本設計） -->
   <section align="center">
+  <style>
+body {
+  height:100%;
+}
+
+body {
+  background: white;
+  background: -webkit-radial-gradient(center ellipse, white 0%, white 70%);
+  background: radial-gradient(ellipse at center, white 0%, white 70%);
+  background-size: 100%;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ #clock {
+  font-family: 'Share Tech Mono', monospace;
+  color: white;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: blue;
+  text-shadow: 0 0 20px gray, 0 0 20px rgba(10, 175, 230, 0);
+}
+#clock .time {
+  letter-spacing: 0.05em;
+  font-size: 55px;
+  padding: 5px 0;
+}
+#clock .date {
+  letter-spacing: 0.1em;
+  font-size: 25px;
+}
+#clock .text {
+  letter-spacing: 0.1em;
+  font-size: 12px;
+  padding: 20px 0 0;
+}
+</style>
+<body>
+<div id="clock" style="top:800px;background-color:white;">
+    <p class="date">{{ date }}</p>
+    <p class="time">{{ time }}</p>
+</div>
     <div align="center" style="width:100%;height:90px;background-color:white;">
       <div style="width:100%;background-color:white;" align="center" class="dxd_beating">
         <span style="font-family:DfKai-SB;color:red;text-align:center;font-size:55px"><strong>聖</strong></span>
@@ -170,6 +219,17 @@
 
 <!-- 右下角時鐘 -->
 <div id="clock1" style="top:830px;background-color:white;">
+
+		<script src="reveal.min.js"></script>
+    <style>
+        #clock1 {
+            position: fixed;
+            bottom: 50px; /* Adjust as needed */
+            left: 20px; /* Adjust as needed */
+            z-index:30;
+            font-size: 24px;
+        }
+    </style>
 
   <script type="text/javascript">
     function getTodayDate() {
